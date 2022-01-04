@@ -1,14 +1,13 @@
 package com.example.springbootmasterclass.customer;
 
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collections;
 import java.util.List;
 
 @Repository
-@Primary
+//@Primary
 public class CustomerRepository implements CustomerRepo{
 
     @Override
