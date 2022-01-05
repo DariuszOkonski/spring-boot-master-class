@@ -37,5 +37,4 @@ public class CustomerController {
     public void deleteCustomer(@PathVariable("customerId") Long id) {
         System.out.println("DELETE Request for customer with id: " + id);
     }
-
 }
