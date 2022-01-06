@@ -11,11 +11,21 @@ public class CustomerService {
 
     @Autowired
     public CustomerService(CustomerRepo customerRepo) {
+
         this.customerRepo = customerRepo;
     }
 
     public List<Customer> getCustomers() {
+
         return this.customerRepo.getCustomers();
+    }
+
+    public Customer getCustomer(Long id) {
+        return this.customerRepo.getCustomers()
+                .stream()
+                .filter(customer -> customer.getId().equals(id))
+                .findFirst()
+                .orElseThrow(() -> new IllegalStateException("customer not found"));
     }
 }
 

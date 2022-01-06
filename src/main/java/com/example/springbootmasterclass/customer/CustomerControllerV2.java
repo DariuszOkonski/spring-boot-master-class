@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v2/customer")
+@RequestMapping(path = "api/v2/customers")
 public class CustomerControllerV2 {
 
     private final CustomerService customerService;
@@ -17,11 +17,14 @@ public class CustomerControllerV2 {
         this.customerService = customerService;
     }
 
-    @GetMapping(value = "all")
-    public List<Customer> getCustomer() {
-        return Arrays.asList(
-                new Customer(0L, "v2", "v2pass")
-        );
+    @GetMapping
+    public List<Customer> getCustomers() {
+        return this.customerService.getCustomers();
+    }
+
+    @GetMapping(path = "{customerId}")
+    public Customer getCustomer(@PathVariable("customerId") Long id) {
+        return this.customerService.getCustomer(id);
     }
 
     @PostMapping
