@@ -1,8 +1,8 @@
 package com.example.springbootmasterclass.customer;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class CustomerService {
 
     Customer getCustomer() {
