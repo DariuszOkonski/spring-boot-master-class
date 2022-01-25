@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+//now Beans
+
 @RestController
 public class CustomerController {
 
