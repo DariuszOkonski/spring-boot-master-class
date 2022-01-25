@@ -1,8 +1,16 @@
 package com.example.springbootmasterclass.customer;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
-@Repository
-public class CustomerRepository {
+import java.util.Collections;
+import java.util.List;
 
+@Component
+public class CustomerRepository implements  CustomerRepo{
+
+    @Override
+    public List<Customer> getCustomers() {
+//        TODO connect to real db
+        return Collections.emptyList();
+    }
 }
