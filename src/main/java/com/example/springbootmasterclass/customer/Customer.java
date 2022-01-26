@@ -17,6 +17,14 @@ public class Customer {
         return name;
     }
 
+    public Long getCustomerId() {
+        return id;
+    }
+
+    public String getNameAndId() {
+        return name + " - " + id.toString();
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
