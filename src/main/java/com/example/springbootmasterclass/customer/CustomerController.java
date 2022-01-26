@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// building apis with spring mvc - testing put and delete
+
 @RestController
 public class CustomerController {
 
@@ -17,6 +19,7 @@ public class CustomerController {
 
     @GetMapping
     public List<Customer> getCustomer() {
+        System.out.println("GET REQUEST...");
         return this.customerService.getCustomers();
     }
 
