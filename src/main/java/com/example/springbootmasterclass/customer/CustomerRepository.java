@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Collections;
 import java.util.List;
 
-@Repository
-@Primary
+//@Repository
+//@Primary
 public class CustomerRepository implements  CustomerRepo{
 
     @Override
