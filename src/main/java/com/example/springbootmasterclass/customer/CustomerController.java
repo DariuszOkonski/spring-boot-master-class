@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// building apis with spring mvc - testing put and delete
 
 @RestController
 public class CustomerController {
@@ -19,25 +18,25 @@ public class CustomerController {
 
     @GetMapping
     public List<Customer> getCustomer() {
-        System.out.println("GET REQUEST...");
-        return this.customerService.getCustomers();
+        System.out.println("GET REQUEST");
+        return null;
     }
 
     @PostMapping
     public void createNewCustomer(@RequestBody Customer customer) {
-        System.out.println("POST REQUEST...");
+        System.out.println("POST REQUEST");
         System.out.println(customer);
     }
 
     @PutMapping
     public void updateCustomer(@RequestBody Customer customer) {
-        System.out.println("PUT REQUEST...");
+        System.out.println("PUT REQUEST");
         System.out.println(customer);
     }
 
     @DeleteMapping(path = "{customerId}")
     public void deleteCustomer(@PathVariable("customerId") Long id) {
-        System.out.println("DELETE REQUEST...");
+        System.out.println("DELETE REQUEST");
         System.out.println(id);
     }
 }
