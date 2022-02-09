@@ -3,6 +3,7 @@ package com.example.springbootmasterclass.customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -27,7 +28,7 @@ public class CustomerControllerV2 {
     }
 
     @PostMapping
-    public void createNewCustomer(@RequestBody Customer customer) {
+    public void createNewCustomer(@Valid @RequestBody Customer customer) {
         System.out.println("POST REQUEST v2");
         System.out.println(customer);
     }
