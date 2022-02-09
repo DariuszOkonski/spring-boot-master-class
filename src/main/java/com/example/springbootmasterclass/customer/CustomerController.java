@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RequestMapping(path = "/api/v1/customer")
 @RestController
+@Deprecated
 public class CustomerController {
 
     private final CustomerService customerService;
